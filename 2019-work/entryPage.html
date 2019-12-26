@@ -1,0 +1,347 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Applane for Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+      }
+      .flexible {
+        display: flex;
+      }
+      .flexible > div {
+        flex: 1;
+        display: flex;
+      }
+      .flexible > .f2 {
+        flex: 2;
+      }
+      .bold-text {
+        font-weight: bold;
+      }
+      .logo {
+        height: 60px;
+        margin: auto;
+      }
+      .flexible {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .card {
+        position: relative;
+        margin: auto;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 2rem;
+        width: 60%;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.5rem;
+      }
+      .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      .col-form-label {
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding: 0.5rem;
+      }
+      .form-control {
+        padding: 0.5rem 15px;
+        font-size: 1rem;
+        width: 90%;
+        line-height: 1.5rem;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .form-control:focus {
+        border-color: #007bff;
+        outline-color: #007bff;
+        box-shadow: 0 0 10px 0 #007bff;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s out;
+      }
+      .btn {
+        outline-color: #007bff;
+        display: inline-block;
+        font-weight: 400;
+        width: 140px;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        color: #eee;
+      }
+      .btn-primary:hover {
+        border-color: #007bff;
+      }
+      .btn-outline-primary {
+        color: #007bff;
+        background-color: transparent;
+        background-image: none;
+        border-color: #007bff;
+      }
+      .btn-outline-primary:hover {
+        color: #eee;
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: all 0.15 ease-in-out;
+      }
+      .visible {
+        visibility: visible;
+      }
+      .invisible {
+        visibility: hidden;
+      }
+      .disabled,
+      .disabled:hover {
+        background-color: #f9f9f9;
+        color: white;
+        border-color: #909090;
+        outline: none;
+        cursor: not-allowed;
+      }
+      @media screen and (min-width: 700px) {
+        .form-control {
+          width: 325px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .col-form-label,
+        .form-control {
+          font-size: 1rem;
+        }
+        .btn {
+          font-size: 0.825rem;
+        }
+        .form-control {
+          width: 80%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .card {
+          width: 80%;
+          padding: 1.5rem;
+        }
+        .card .flexible {
+          display: block;
+        }
+        .form-control {
+          width: 100%;
+        }
+        .col-form-label {
+          text-align: left;
+          padding-left: 0;
+        }
+        .flexible {
+          margin-bottom: 0.75rem;
+        }
+        .flexible > div.empty {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .logo {
+          height: 45px;
+        }
+      }
+    </style>
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <div style="margin: 10px 20px;" class="flexible text-center">
+      <div>
+        <img
+          id="applaneImg"
+          class="logo"
+          src="http://lh6.ggpht.com/4qb0-IRoQkJnxG5LHzZIcU-Idvwrf6aFt9raiEnl_m8xlH635CkOq0EmRdfZOGyia-dfEMBQn4-DbKzH4m-KXy4Dp-s"
+        />
+      </div>
+      <div>
+        <img
+          id="orgImg"
+          class="logo"
+          src="http://lh3.googleusercontent.com/sPjcm5XxhrjToVF8jepMAOwsNlnhUW3ROlQBPtG4fWbnJALF_q351Sl9rQINtpd-BZyVigb28ibMZf1T1jrKgGwVJQ"
+        />
+      </div>
+    </div>
+    <div>
+      <h4 class="bold-text" style="text-align: center; font-size: 1.5rem;">
+        Roll Over Enrollment Form
+      </h4>
+    </div>
+    <div>
+      <div class="card">
+        <div class="flexible">
+          <div>
+            <label for="enrollmentNo" class="col-form-label">
+              Student Code
+            </label>
+          </div>
+          <div class="f2">
+            <input
+              type="text"
+              name="enrollmentNo"
+              id="enrollmentNo"
+              class="form-control"
+              placeholder="Enter enrollment no"
+            />
+          </div>
+        </div>
+        <div class="flexible">
+          <div class="empty">&nbsp;</div>
+          <div class="f2">
+            <button id="generateOTP" class="btn btn-outline-primary">
+              Generate OTP
+            </button>
+          </div>
+        </div>
+        <div id="otpBlock" class="invisible">
+          <div class="flexible">
+            <div>
+              <label for="enrollmentNo" class="col-form-label">
+                Enter OTP
+              </label>
+            </div>
+            <div class="f2">
+              <input
+                type="text"
+                name="otp"
+                id="otp"
+                class="form-control"
+                placeholder="Enter OTP"
+              />
+            </div>
+          </div>
+          <div class="flexible">
+            <div class="empty">&nbsp;</div>
+            <div class="f2">
+              <button id="verifyOTP" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // $("#enrollmentNo").change(function() { var enrollmentNo = $("#enrollmentNo").val; if (enrollmentNo && enrollmentNo !== undefined && enrollmentNo !== null && enrollmentNo !== "") { $("#generateOTP").removeAttr("disabled"); } else { $("#generateOTP").attr("disabled", "disabled"); } });
+
+      var i = 31,
+        counter = 0;
+      $("#generateOTP").click(function() {
+        var enrollmentNo = $("#enrollmentNo").val();
+        if (enrollmentNo && !counter) {
+          $("#otpBlock")
+            .addClass("visibile")
+            .removeClass("invisible");
+          var enrollmentNo = $("#enrollmentNo").val();
+          counter = i;
+          startTimer();
+          $.ajax({
+            url: "http://sis.applane.com/escape/updatestudentauth",
+            success: function(result) {
+              console.log("result: " + JSON.stringify(result));
+            },
+            data: {
+              organization: "universal",
+              pay_code: "23",
+              request_type: 1,
+              enrollment_no: enrollmentNo
+            }
+          });
+        } else if (!counter) {
+          $("#otpBlock")
+            .addClass("invisible")
+            .removeClass("visibile");
+        }
+      });
+      $("#verifyOTP").click(function() {
+        var enrollmentNo = $("#enrollmentNo").val();
+        var otp = $("#otp").val();
+        $.ajax({
+          url: "http://sis.applane.com/escape/updatestudentauth",
+          success: function(result) {
+            console.log("result: " + JSON.stringify(result));
+            console.log("result111: " + result);
+            result = JSON.parse(result);
+            if (result.otpVerify === "Success")
+              window.location = result.redirectUrl;
+          },
+          data: {
+            organization: "universal",
+            pay_code: "23",
+            request_type: 2,
+            enrollment_no: enrollmentNo,
+            otp: otp
+          }
+        });
+      });
+
+      function startTimer() {
+        var stop = setInterval(function() {
+          counter--;
+          $("#generateOTP").addClass("disabled");
+          $("#generateOTP").html(
+            "<span style='color:#f66'> Retry After : " + counter + "s</span>"
+          );
+          if (counter === 0) {
+            clearInterval(stop);
+            $("#generateOTP").removeClass("disabled");
+            $("#generateOTP").html("Generate OTP");
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

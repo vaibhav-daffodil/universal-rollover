@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Update Student Details | Applane for Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #previewTable td {
+        word-break: break-all;
+      }
+      @media print {
+        #undertakingPage,
+        #feePolicyPage {
+          page-break-before: always;
+        }
+        #buttonGroup {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-light">
+      <section class="p-4">
+        <div>
+          <h3 class="font-weight-bold text-center">Student Update Form</h3>
+          <table
+            id="previewTable"
+            class="bg-white table table-hover table-bordered"
+          >
+            <tr class="thead-light">
+              <th width="34%">Data</th>
+              <th width="33%">As per school records</th>
+              <th width="33%">Updated values</th>
+            </tr>
+            <tr class="thead-light text-center">
+              <th colspan="3">Student's Information</th>
+            </tr>
+            <tr>
+              <td>Current Academic Year</td>
+              <td>2018-2019</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Class - Div</td>
+              <td>III - C</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Student</td>
+              <td>Code FB19</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>* Name of the Student</td>
+              <td>AABHA BARDE</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>* DOB</td>
+              <td>02/03/2009</td>
+              <td>01/03/2009</td>
+            </tr>
+            <tr>
+              <td>* Religion</td>
+              <td>Indian</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>* Caste</td>
+              <td>GEN</td>
+              <td>SC</td>
+            </tr>
+            <tr>
+              <td>* Mother Tongue</td>
+              <td>MARATHI</td>
+              <td>Hindi</td>
+            </tr>
+            <tr>
+              <td>* Blood Group</td>
+              <td>O+</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Nationality</td>
+              <td>Indian</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>* Passport No./Expiry Date /</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>* Aadhaar Card Number</td>
+              <td>989813604234</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>* Address</td>
+              <td>
+                A-404, RAJ MAXIMUS, OPP LAXMAN MHATRE ROAD, BORIVALI (W), MUMBAI
+                - 400068
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Phone No.(Resi.)</td>
+              <td>28904376</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Mobile No. for SMS</td>
+              <td>9987732000</td>
+              <td></td>
+            </tr>
+            <tr class="thead-light text-center">
+              <th colspan="3">Father's Information</th>
+            </tr>
+            <tr>
+              <td>First Name</td>
+              <td>RUPAK</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td>BARDE</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Qualification</td>
+              <td>Graduate</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Mobile No.</td>
+              <td>9987732000</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Email Id</td>
+              <td>rupakbarde@yahoo.com</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Company Name</td>
+              <td>IDFC LIMITED</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Designation</td>
+              <td>NATIONAL HEAD- VP ADMIN</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Business Contact No.</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Business Address</td>
+              <td>INDIABULS, LOWER PAREL, MUMBAI</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Aadhaar Number</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="thead-light text-center">
+              <th colspan="3">Mother's Information</th>
+            </tr>
+            <tr>
+              <td>First Name</td>
+              <td>HEMANGI</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td>BARDE</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Qualification</td>
+              <td>Post Graduate</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Mobile No.</td>
+              <td>9892057778</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Email Id</td>
+              <td>hemangi.barde@yahoo.in</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Company Name</td>
+              <td>PRINCIPAL PNB ASSET MANAGEMENT CO. PVT LTD</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Designation</td>
+              <td>SENIOR FINANCE MANAGER</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Business Contact No.</td>
+              <td>022-66720589</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Business Address</td>
+              <td>
+                EXCHANGE PLZAZ, GR FLR NSE BUILDING, BKC BANDRA MUMBAI- 51
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Aadhaar Number</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="thead-light text-center">
+              <th colspan="3">Guardian's Information</th>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Relation</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Mobile No.</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Telephone No.</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Email Id</td>
+              <td>rupakbarde@gmail.com</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Aadhar Number</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="form-group form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="parentAcknowledgeCheck"
+            checked="true"
+            disabled="true"
+          />
+          <label class="form-check-label" for="parentAcknowledgeCheck"
+            >I hereby confirm that all the information provided is true and
+            correct to the best of my knowledge.</label
+          >
+        </div>
+        <div id="undertakingPage">
+          <h5 class="text-center font-weight-bold my-4">
+            UNDERTAKING BY PARENT/GUARDIAN
+          </h5>
+          <div>
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;I
+            <span class="font-weight-bold">RUPAK BARDE / HEMANGI BARDE / </span>
+            parent/guardian of
+            <span class="font-weight-bold">AABHA BARDE</span> seeking roll over
+            enrolment in class
+            <span class="font-weight-bold">III - C</span> understand and agree
+            to abide by the following terms and conditions: <br />
+            <ul>
+              <li>
+                My child/ward is being admitted to Universal High School at our
+                request for the sole purposeof education and shall observe and
+                comply with all the rules and regulations.
+              </li>
+              <li>
+                I have carefully read the information provided and agree to
+                abide by the rules andregulations or any substitutions for or
+                any modifications in them, which may be made byschool
+                authorities from time to time.
+              </li>
+              <li>
+                I will deposit the school fees on or before the prescribed due
+                date. In case of non-compliance, at the end of 30 days, the
+                admission of my child/ward may stand cancelled.I give our
+                irrevocable consent to the school management in general and the
+                school staff inparticular to allow my child to travel via
+                transport arranged by the school in conjunction withschool bus
+                operators to playgrounds, club, coaching academies,
+                competitions, field trips,excursions, picnics etc. from time to
+                time.
+              </li>
+              <li>
+                I agree to indemnify the school and the said ’Club’(if
+                applicable) where my child may betaken for sports activities. We
+                keep them indemnified from and against all risks,
+                actions,proceedings, claims, demands, costs, charges, expenses,
+                losses and damages suffered bythe said ’Club’ in the said
+                premises by reason of or in consequences of my ward’snegligence,
+                default, breach of laws / rules / regulations. I shall be solely
+                and personallyresponsible to make good such damage or loss to
+                such person or property and I shallindemnify the said Club /
+                School against all such claims.
+              </li>
+              <li>
+                The school is permitted to use my child’s /ward’s photo/video in
+                it’s group publications,social media platforms and promotional
+                material.
+              </li>
+              <li>
+                The Leaving Certificate / Transfer Certificate / Bonafide
+                Certificate will be issued only afterall my dues are settled.
+              </li>
+              <li>
+                I have no objection to the school following Local State
+                Board/CBSE/ICSE/IB/IGCSEcurriculum and to the changes that may
+                arise thereof. I am also happy that the school isgoing to be a
+                centre of research and innovation.
+              </li>
+              <li>
+                The school may run in shifts and the timings may change
+                accordingly.
+              </li>
+              <li>
+                The school / its affiliated clubs / coaches / instructors do not
+                hold any responsibility in caseof sickness or accidents. This
+                also applies to all accidents which could occur in the
+                sciencelaboratories, workshops, sports fields, gymnasium,
+                swimming, educational tours or journeys to and from the school.
+              </li>
+              <li>
+                The promotion to the next class is not automatic. It will be
+                granted at the end of the AnnualAssessment only in accordance
+                with the school promotion policy, which may vary from timeto
+                time.
+              </li>
+              <li>
+                The school will do its best to provide normal medical aid, but
+                the school will not be heldresponsible for any accident or
+                mishap beyond its control.In an emergency, the school staff may
+                need to exercise their discretion by taking the child tothe
+                nearest Medical Centre/Hospital.
+              </li>
+              <li>
+                No valuables like watches, gold rings, gold chains, electronic
+                or digital devices such asmobile phone, tablet, ipad, etc. are
+                to be given to the students and the institute does nottake
+                responsibility for the loss of any such valuables.
+              </li>
+              <li>
+                No parent /family member would be allowed to wait in the
+                premises while the sessions are inprogress.
+              </li>
+              <li>
+                I understand and acknowledge that the implementation of the
+                provisions of Right of Childrento Free &amp; Compulsory
+                Education (RCFCE) Act 2009 , popularly known as Right
+                toEducation (RTE) Act, or any other such redistributive,
+                means-tested or subsidizing law,grant, quota or scheme
+                implemented or enforced, any time now or in the future, by
+                thecentral government, state government, municipal corporation
+                or any statutory authority, willpose an extra-ordinary,
+                unforeseen, unavoidable, irreparable and permanent burden on
+                theinstitute’s operating expenses, thereby constraining the
+                institute to, in such an event, passthe said burden on to the
+                existing parents by increasing tuition fees extra-ordinarily,
+                which Ihereby agree to bear and pay willfully such tuition fees
+                when called upon to do so, withoutany delay, and further, I
+                hereby agree to indemnify and hold harmless the institute and
+                itsauthorities against any loss, claim, damage, cost or
+                consequence of any nature whatsoever,on the account of the
+                increase in tuition fees owing to the statutory implementation
+                orenforcement of such a law, grant, quota or scheme as explained
+                herein above.
+              </li>
+              <li>
+                Particular student may be de-registered for
+                <ol type="a">
+                  <li>Non payment of dues</li>
+                  <li>Unsatisfactory progress over a period of time</li>
+                  <li>Causing harm to other students</li>
+                  <li>Immorality</li>
+                  <li>Grave insubordination</li>
+                  <li>
+                    Extortion or Stealing money / belongings of other students
+                  </li>
+                  <li>Contempt of authority</li>
+                  <li>Exceeding bounds</li>
+                  <li>Damaging /Stealing school property</li>
+                  <li>
+                    Words or actions likely to undermine the reputation of the
+                    organization
+                  </li>
+                  <li>
+                    Bullying, assaulting and ragging of any form whatsoever
+                  </li>
+                  <li>Possession of unauthorised materials and objects</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="parentUnderTaking"
+            checked="true"
+            disabled="true"
+          />
+          <label class="form-check-label" for="parentUnderTaking"
+            >I have carefully read, understood and agree to abide by all the
+            points mentioned in the Parent Undertaking and the Parents Code of
+            Conduct posted on the school website. Failing which, the school is
+            free to take suitable penal action including expulsion of my
+            child/ward.</label
+          >
+        </div>
+        <div id="feePolicyPage">
+          <h5 class="font-weight-bold text-center my-4">FEE POLICY</h5>
+          <div>
+            <ol>
+              <li>
+                Fees for the entire year can be paid together at the time of
+                admission.
+              </li>
+              <li>
+                The first instalment is payable by Credit Card/Debit Card/DD
+                along with post dated cheques for the remaining instalments of
+                the year.
+              </li>
+              <li>
+                The fee cheques are to be drawn in the name of ProfitCenter.
+              </li>
+              <li>
+                Kindly mention the student code and mobile no. of the parent /
+                guardian on the reverse of all cheques.
+              </li>
+              <li>
+                The fees are payable in instalments as prescribed by the school
+                only on or before the scheduled dates. The payment of fees by
+                instalment is intended merely to facilitate the parents /
+                guardians and should not in any manner be construed as a right.
+                The school reserves its right to discontinue and/or reduce
+                payment by instalments at its discretion.
+              </li>
+              <li>
+                Fees once paid are non-transferable / non-adjustable /
+                non-refundable under any circumstances and are subject to the
+                exceptions as set out in the Admission Withdrawal Policy.
+              </li>
+              <li>
+                Exit documents will be issued only after full and complete
+                settlement of outstanding dues.
+              </li>
+              <li>
+                Any statutory taxes, if made applicable and/or if increased
+                and/or for any facility provided by the school, shall have to be
+                borne and shall have to be paid by parents / guardians from time
+                to time.
+              </li>
+              <li>
+                In case of any cheque towards payment of fees being dishonoured,
+                the school reserves its right to de-enroll the student at its
+                discretion and levy any other penalty as it may deem fit.
+              </li>
+              <li>
+                The school reserves its right to disallow a student from
+                participating in any of its activities whose fees remain unpaid
+                in full or in part.
+              </li>
+              <li>
+                The school reserves its right to not to issue reports,
+                certificates or recommendations to future institutions whose
+                fees remain unpaid in full or in part.
+              </li>
+              <li>
+                If a Cheque is dishonoured, bounce charges of Rs 250 will be
+                levied per cheque. Late fee will not be applicable in that
+                month.
+              </li>
+              <li>
+                Late fee of Rs 250 per month is calculated from the date of the
+                instalment and will be levied from the subsequent month over and
+                above the bounce charges till the outstanding dues are cleared.
+              </li>
+              <li>
+                The payment of that instalment along with bounce charges and
+                late fee is payable only by Credit Card/Debit Card/DD/online
+                gateway.
+              </li>
+              <li>
+                The school reserves the right to increase / revise / amend the
+                fee structure.
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div id="refundPolicyPage">
+          <h5 class="font-weight-bold text-center my-4">
+            ADMISSION WITHDRAWAL POLICY
+          </h5>
+          <div>
+            <ol>
+              <li>
+                Admission fee / Registration fees once paid will not be refunded
+                under any circumstances or for any reason whatsoever.
+              </li>
+              <li>
+                If a parent / guardian withdraws admission of his / her child /
+                ward at any time before the scheduled commencement of academic
+                term, refund, if any, of fees, will be subject to the following
+                provisions.
+                <ul>
+                  <li>
+                    If an admission is withdrawn on / or before 30 days prior to
+                    the commencement of the academic year, full tuition fee and
+                    term fee will be refunded.
+                  </li>
+                  <li>
+                    If an admission is withdrawn by giving less than 30 days
+                    notice prior to the scheduled date of commencement of the
+                    academic term, one month tuition fees will be payable by the
+                    parent / guardian to the school.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                After the commencement of the academic term if a child / ward
+                does not report to school at all and if the admission is
+                withdrawn at any point of time, one month tuition fee and one
+                term fee will be payable by the parent / guardian to the school.
+              </li>
+              <li>
+                After the commencement of the academic term, if a child / ward
+                attends the school even for a single day &amp; if the admission
+                is withdrawn, the following fees will be payable by the parent /
+                guardian to the school.
+                <ol type="I">
+                  <li>
+                    Fee till the month of withdrawal application calculated from
+                    the month of the commencement of the academic term (both
+                    months inclusive)
+                  </li>
+                  <li>1 month notice period fee</li>
+                  <li>
+                    <ol type="a">
+                      <li>
+                        1 term fee (in case the admission is withdrawn in the
+                        1st term)
+                      </li>
+                      <li>
+                        2 term fees (in case the admission is withdrawn in the
+                        2nd term)
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="form-group form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="feeAndRefundPolicy"
+            checked="true"
+            disabled="true"
+          />
+          <label class="form-check-label" for="feeAndRefundPolicy"
+            >I have carefully read, understood and agree to all the points
+            mentioned in the fee policy &amp; fee refund policy and undertake to
+            abide by the same in full, failing which the school is free to
+            withhold the exit documents and take suitable penal/legal
+            action.</label
+          >
+        </div>
+        <div id="buttonGroup" class="text-center">
+          <button type="submit" class="btn btn-primary mx-2">
+            Proceed to Payment
+          </button>
+          <button class="btn btn-outline-primary" onclick="window.print()">
+            Download / Print
+          </button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

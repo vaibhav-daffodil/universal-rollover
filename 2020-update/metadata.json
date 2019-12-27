@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "name": "studentname",
+      "label": "Student Name",
+      "type": "text",
+      "editable": false,
+      "sequence": 1
+    },
+    {
+      "name": "fathername",
+      "label": "Father's Name",
+      "type": "text",
+      "editable": false,
+      "sequence": 2
+    },
+    {
+      "name": "mothername",
+      "label": "Mother's Name",
+      "type": "text",
+      "editable": false,
+      "sequence": 3
+    },
+    {
+      "name": "motherofficename",
+      "label": "Office Name",
+      "type": "text",
+      "editable": true,
+      "sequence": 4
+    },
+    {
+      "name": "guardianname",
+      "label": "Guardian's Name",
+      "type": "text",
+      "editable": true,
+      "sequence": 5
+    },
+    {
+      "name": "guardianmobile",
+      "label": "Mobile No",
+      "type": "text",
+      "editable": true,
+      "sequence": 6
+    }
+  ]
+}

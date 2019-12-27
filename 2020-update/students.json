@@ -1,0 +1,64 @@
+{
+  "students": [
+    {
+      "groups": [
+        {
+          "name": "Guardian's Information",
+          "sequence": 4,
+          "fields": {
+            "guardinaname": {
+              "value": "Sushant",
+              "updated": "Sushant Sharma"
+            },
+            "guardinamobile": {
+              "value": "9775456632",
+              "updated": "7744566698"
+            }
+          }
+        },
+        {
+          "name": "Student's Information",
+          "sequence": 1,
+          "fields": {
+            "studentname": {
+              "value": "Ravi Bhardwaj",
+              "updated": null
+            },
+            "dateofbirth": {
+              "value": "15-02-2007",
+              "updated": "15-03-2007"
+            }
+          }
+        },
+        {
+          "name": "Mother's Information",
+          "sequence": 3,
+          "fields": {
+            "mothername": {
+              "value": "Shikha Bhardwaj",
+              "updated": null
+            },
+            "motherofficename": {
+              "value": "KV School",
+              "updated": null
+            }
+          }
+        },
+        {
+          "name": "Father's Information",
+          "sequence": 2,
+          "fields": {
+            "fathername": {
+              "value": "Akshay Bhardwaj",
+              "updated": null
+            },
+            "fatheremail": {
+              "value": "ak.bhardwaj@applanetest.com",
+              "updated": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
